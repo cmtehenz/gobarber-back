@@ -1,3 +1,4 @@
+import { classToClass } from 'class-transformer';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
@@ -19,6 +20,6 @@ export default class ProviderAppointmentsController {
       year: Number(year),
     });
 
-    return res.json(appointments);
+    return res.json(classToClass(appointments));
   }
 }

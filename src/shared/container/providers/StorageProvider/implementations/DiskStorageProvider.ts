@@ -23,7 +23,9 @@ class DiskStorageProvider implements IStorageProvider {
     } catch {
       return;
     }
-
+    if (file === 'avatar.pg') {
+      return;
+    }
     await fs.promises.unlink(filePath);
   }
 }

@@ -11,6 +11,7 @@ interface IRequest {
   user_id: string;
   name: string;
   email: string;
+  provider: boolean;
   old_password?: string;
   password?: string;
 }
@@ -29,6 +30,7 @@ class UpdateProfileService {
     user_id,
     name,
     email,
+    provider,
     password,
     old_password,
   }: IRequest): Promise<User> {
@@ -59,6 +61,7 @@ class UpdateProfileService {
       user.password = await this.hashProvider.generateHash(password);
     }
 
+    user.provider = provider;
     user.name = name;
     user.email = email;
 

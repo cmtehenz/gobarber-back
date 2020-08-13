@@ -105,9 +105,11 @@ dist/
 .dynamodb/
 
 # Temporary folders
-tmp/*
+
+tmp/uploads/*
 !tmp/.gitkeep
-temp/
+!tmp/uploads/.gitkeep
+
 
 ormconfig.json
 

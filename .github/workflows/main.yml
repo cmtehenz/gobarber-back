@@ -16,7 +16,7 @@ jobs:
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
-        node-version: 14.x
+        node-version: 12.x
 
     #Instalar as dependências NPM/yarn
     - name: Install dependences
